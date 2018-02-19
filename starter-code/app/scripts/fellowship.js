@@ -24,9 +24,10 @@ var body = document.querySelector('body');
 
 
 function makeMiddleEarth() {
-  // create a section tag with an id of middle-earth
-  // add each land as an article tag
-  // inside each article tag include an h1 with the name of the land
+  // create a section element with an ID of middle-earth
+  // create an article element for each land
+  // inside each article element include an h1 with the name of the land
+  // append the land article element to the middle-earth section element
   // append middle-earth to your document body
 }
 
