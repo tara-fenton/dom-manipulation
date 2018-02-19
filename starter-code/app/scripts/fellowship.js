@@ -37,7 +37,7 @@ makeMiddleEarth();
 // Part 2
 
 function makeHobbits() {
-  // display an unordered list of hobbits in the shire (which is the second article tag on the page)
+  // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
 }
 
@@ -81,8 +81,8 @@ function leaveTheShire() {
 
 
 function forgeTheFellowShip() {
-  // create a new div called 'the-fellowship' within rivendell
-  // add each hobbit and buddy one at a time to 'the-fellowship'
+  // create a new div called theFellowship within rivendell
+  // add each hobbit and buddy one at a time to theFellowship
   // after each character is added make an alert that they have joined your party
 }
 
