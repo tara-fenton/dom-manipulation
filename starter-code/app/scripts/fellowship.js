@@ -24,11 +24,20 @@ var body = document.querySelector('body');
 
 
 function makeMiddleEarth() {
-  // create a section element with an ID of middle-earth
-  // create an article element for each land
-  // inside each article element include an h1 with the name of the land
-  // append the land article element to the middle-earth section element
+   // create a section element with an ID of middle-earth
+  var middleEarth = document.createElement("section");
+  middleEarth.setAttribute("id", "middle-earth");
+
+  for (var i = 0; i < lands.length; i++) {
+    // create an article element for each land
+    var land = document.createElement("article");
+    // inside each article element include an h1 with the name of the land
+    land.innerHTML = "<h1>" + lands[i] + "</h1>";
+    // append the land article element to the middle-earth section element
+    middleEarth.appendChild(land);
+  }
   // append middle-earth to your document body
+  body.appendChild(middleEarth);
 }
 
 makeMiddleEarth();
