@@ -74,10 +74,11 @@ function keepItSecretKeepItSafe() {
   ring.className = "magic-imbued-jewelry";
 
   // add the ring as a child of Frodo
-  shire.appendChild(ring)
+  var frodo = body.querySelectorAll("li")[0]
+  frodo.appendChild(ring)
 }
 
-//keepItSecretKeepItSafe();
+keepItSecretKeepItSafe();
 // Part 4
 
 
