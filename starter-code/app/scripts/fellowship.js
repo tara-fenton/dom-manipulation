@@ -102,9 +102,12 @@ makeBuddies();
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
+  var aragorn = body.querySelectorAll("article")[1].querySelectorAll("li")[3];
+  aragorn.innerHTML = "Aragorn";
+  console.log(aragorn);
 }
-
-
+//*[@id="middle-earth"]/article[2]/aside/li[4]
+beautifulStranger();
 // Part 6
 
 function leaveTheShire() {
