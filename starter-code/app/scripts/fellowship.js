@@ -28,7 +28,7 @@ function makeMiddleEarth() {
   var middleEarth = document.createElement("section");
   middleEarth.setAttribute("id", "middle-earth");
 
-  for (var i = 0; i < lands.length; i++) {
+  for (var i = 0;  i < lands.length; i++) {
     // create an article element for each land
     var land = document.createElement("article");
     // inside each article element include an h1 with the name of the land
@@ -38,28 +38,46 @@ function makeMiddleEarth() {
   }
   // append middle-earth to your document body
   body.appendChild(middleEarth);
+
+
 }
 
 makeMiddleEarth();
 
 
 // Part 2
+var shire = body.querySelectorAll("article")[0];
 
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
-  // give each hobbit a class of hobbit
+  var hobbitList = document.createElement("ul");
+
+  for (var i = 0; i < hobbits.length; i++) {
+    var hobbitItem = document.createElement("li");
+    hobbitItem.innerHTML = hobbits[i];
+    // give each hobbit a class of hobbit
+    hobbitItem.className = "hobbit";
+    shire.appendChild(hobbitItem);
+  }
+
 }
 
+makeHobbits();
 
 // Part 3
 
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
+  var ring = document.createElement("div");
+  ring.setAttribute("id", "the-ring");
   // give the div a class of 'magic-imbued-jewelry'
+  ring.className = "magic-imbued-jewelry";
+
   // add the ring as a child of Frodo
+  shire.appendChild(ring)
 }
 
-
+//keepItSecretKeepItSafe();
 // Part 4
 
 
