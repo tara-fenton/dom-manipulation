@@ -1,4 +1,4 @@
-console.log("Linked.");
+    console.log("Linked.");
 
 // Dramatis Personae
 var hobbits = [
@@ -48,7 +48,7 @@ function makeHobbits() {
     hobbit.innerText = hobbits[i];
     hobbitList.appendChild(hobbit);
   }
-  theShire.appendChild(hobbitList);
+  shire.appendChild(hobbitList);
 }
 
 makeHobbits();
