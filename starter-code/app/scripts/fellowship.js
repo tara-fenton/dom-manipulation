@@ -63,12 +63,12 @@ function makeHobbits() {
 }
 
 makeHobbits();
-
+var ring = document.createElement('div');
 // Part 3
 var frodo = body.querySelectorAll('li')[0];
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
-  var ring = document.createElement('div');
+
   ring.setAttribute('id', 'the-ring');
   // give the div a class of 'magic-imbued-jewelry'
   ring.className = "magic-imbued-jewelry";
@@ -167,13 +167,13 @@ hornOfGondor();
 // Part 10
 var sam = fellowship[6];
 var mordor = body.querySelectorAll('article')[2];
-
+var doom = document.createElement('div');
 function itsDangerousToGoAlone(){
   // take Frodo and Sam out of the fellowship and move them to Mordor
   mordor.appendChild(frodo);
   mordor.appendChild(sam)
   // add a div with an id of 'mount-doom' to Mordor
-  var doom = document.createElement('div');
+
   doom.setAttribute('id', 'mount-doom');
   mordor.appendChild(doom);
 }
@@ -183,15 +183,31 @@ itsDangerousToGoAlone();
 
 function weWantsIt() {
   // Create a div with an id of 'gollum' and add it to Mordor
+  var gollum = document.createElement('div')
+  gollum.setAttribute('id', 'gollum');
+  mordor.appendChild(gollum);
   // Remove the ring from Frodo and give it to Gollum
+  gollum.appendChild(ring);
   // Move Gollum into Mount Doom
+  doom.appendChild(gollum);
 }
-
+weWantsIt();
 
 // Part 12
 
 function thereAndBackAgain() {
   // remove Gollum and the Ring from the document
-  // remove all the baddies from the document
+  doom.removeChild(gollum);
+
   // Move all the hobbits back to the shire
+  var hobbits = body.querySelectorAll('.hobbit');
+  for (var i = 0; i < hobbits.length; i++) {
+    shire.appendChild(hobbits[i]);
+  }
+  // remove all the baddies from the document
+  var baddies = rivendell.querySelectorAll('ul');
+  //rivendell.removeChild(baddies);
+  console.log("baddies "+baddies);
+
 }
+thereAndBackAgain();
