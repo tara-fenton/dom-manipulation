@@ -65,7 +65,7 @@ function makeHobbits() {
 makeHobbits();
 
 // Part 3
-
+var frodo = body.querySelectorAll('li')[0];
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
   var ring = document.createElement('div');
@@ -74,7 +74,7 @@ function keepItSecretKeepItSafe() {
   ring.className = "magic-imbued-jewelry";
 
   // add the ring as a child of Frodo
-  var frodo = body.querySelectorAll('li')[0];
+
   frodo.appendChild(ring);
 }
 
@@ -165,12 +165,19 @@ function hornOfGondor() {
 
 hornOfGondor();
 // Part 10
+var sam = fellowship[6];
+var mordor = body.querySelectorAll('article')[2];
 
 function itsDangerousToGoAlone(){
   // take Frodo and Sam out of the fellowship and move them to Mordor
+  mordor.appendChild(frodo);
+  mordor.appendChild(sam)
   // add a div with an id of 'mount-doom' to Mordor
+  var doom = document.createElement('div');
+  doom.setAttribute('id', 'mount-doom');
+  mordor.appendChild(doom);
 }
-
+itsDangerousToGoAlone();
 
 // Part 11
 
