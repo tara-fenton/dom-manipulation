@@ -131,7 +131,7 @@ function forgeTheFellowShip() {
   // add each hobbit and buddy one at a time to theFellowship
   for (var i = 0; i < fellowship.length; i++) {
     theFellowship.appendChild(fellowship[i]);
-    alert(fellowship[i].textContent + " has joined the party")
+    //alert(fellowship[i].textContent + " has joined the party")
   }
   // after each character is added make an alert that they have joined your party
   rivendell.appendChild(theFellowship);
@@ -143,10 +143,16 @@ forgeTheFellowShip();
 
 function theBalrog() {
   // change the 'Gandalf' textNode to 'Gandalf the White'
+  //#middle-earth > article:nth-child(2) > div
+  var gandalf = rivendell.querySelector('li');
+  gandalf.innerHTML = "Gandalf the White";
+
+  console.log(gandalf);
   // apply style to the element
+  gandalf.style = "color: red; background: white; border: 1px solid grey;"
   // make the background 'white', add a grey border
 }
-
+theBalrog();
 
 // Part 9
 
