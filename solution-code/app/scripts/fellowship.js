@@ -48,7 +48,7 @@ function makeHobbits() {
     hobbit.innerText = hobbits[i];
     hobbitList.appendChild(hobbit);
   }
-  shire.appendChild(hobbitList);
+  theShire.appendChild(hobbitList);
 }
 
 makeHobbits();
@@ -140,7 +140,7 @@ function hornOfGondor() {
   boromir.style.textDecoration = 'line-through';
   // Boromir's been killed by the Uruk-hai!
   // Remove Boromir from the Fellowship
-  boromir.parentNode.removeChild(boromir)
+  //boromir.parentNode.removeChild(boromir)
 
 }
 

@@ -122,12 +122,10 @@ leaveTheShire();
 // Part 7
 
 var fellowship = rivendell.querySelectorAll('li');
-console.log(fellowship);
 
 function forgeTheFellowShip() {
   // create a new div called theFellowship within rivendell
   var theFellowship = document.createElement('div');
-  console.log(theFellowship)
   // add each hobbit and buddy one at a time to theFellowship
   for (var i = 0; i < fellowship.length; i++) {
     theFellowship.appendChild(fellowship[i]);
@@ -146,8 +144,6 @@ function theBalrog() {
   //#middle-earth > article:nth-child(2) > div
   var gandalf = rivendell.querySelector('li');
   gandalf.innerHTML = "Gandalf the White";
-
-  console.log(gandalf);
   // apply style to the element
   gandalf.style = "color: red; background: white; border: 1px solid grey;"
   // make the background 'white', add a grey border
@@ -155,15 +151,19 @@ function theBalrog() {
 theBalrog();
 
 // Part 9
-
+var boromir = fellowship[4];
+console.log(boromir);
 function hornOfGondor() {
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
+  //alert("Boromir's been killed by the Uruk-hai!")
   // put a linethrough on boromir's name
+  boromir.style.textDecoration = 'linethrough';
   // Remove Boromir from the Fellowship
+  boromir.parentNode.removeChild(boromir);
 }
 
-
+hornOfGondor();
 // Part 10
 
 function itsDangerousToGoAlone(){
