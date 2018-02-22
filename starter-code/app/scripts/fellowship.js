@@ -110,11 +110,10 @@ function beautifulStranger() {
 //*[@id="middle-earth"]/article[2]/aside/li[4]
 beautifulStranger();
 // Part 6
-console.log(shire)
+
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
   var hobbitsAssemble = shire.querySelector('ul');
-  console.log(hobbitsAssemble);
   rivendell.appendChild(hobbitsAssemble);
 }
 
@@ -122,13 +121,22 @@ leaveTheShire();
 
 // Part 7
 
+var fellowship = rivendell.querySelectorAll('li');
+console.log(fellowship);
 
 function forgeTheFellowShip() {
   // create a new div called theFellowship within rivendell
+  var theFellowship = document.createElement('div');
+  console.log(theFellowship)
   // add each hobbit and buddy one at a time to theFellowship
+  for (var i = 0; i < fellowship.length; i++) {
+    theFellowship.appendChild(fellowship[i]);
+    alert(fellowship[i].textContent + " has joined the party")
+  }
   // after each character is added make an alert that they have joined your party
+  rivendell.appendChild(theFellowship);
 }
-
+forgeTheFellowShip();
 
 // Part 8
 
